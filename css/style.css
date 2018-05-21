@@ -19,7 +19,7 @@ body, html {
 
 body {
   min-height: 100vh;
-  background: url("/assets/sitica-background.svg");
+  background: url("../assets/sitica-background.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left top; }

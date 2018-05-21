@@ -51,13 +51,13 @@ $(document).ready(() => {
     prevArrow: 
       `
         <button type="button" class="slick-prev">
-          <img src="/assets/arrow-left.icon.svg">
+          <img src="assets/arrow-left.icon.svg">
         </button>
       `,
     nextArrow: 
       `
         <button type="button" class="slick-next">
-          <img src="/assets/arrow-right.icon.svg">
+          <img src="assets/arrow-right.icon.svg">
         </button>
       `,
       responsive: [
