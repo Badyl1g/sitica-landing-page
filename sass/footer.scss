@@ -1,0 +1,31 @@
+footer {
+  width: 100%;
+  height: var(--footer-height);
+  display: grid;
+  padding: 30px;
+  // grid-template-columns: var(--columns);
+  grid-auto-rows: auto;
+  text-align: center;
+  transition: 
+    transform 0.3s ease-in-out, 
+    opacity 0.3s ease-in-out;
+  
+  .design, .code {
+    // grid-column: 2/3;
+    align-self: center;
+    margin: 0;
+
+    .author {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+@media (min-width: 1280px)
+{
+  footer {
+    text-align: left;
+  }
+}
