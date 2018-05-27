@@ -335,7 +335,7 @@ header {
       align-self: center;
       text-align: left; }
     .container .cards {
-      width: calc(100% - 800px);
+      width: calc(100% - 600px);
       max-width: unset;
       grid-column: 2/4;
       grid-row: 1/2;
@@ -350,6 +350,14 @@ header {
       grid-row: 1/2;
       justify-self: end;
       margin-bottom: 0; } }
+
+@media (min-width: 1440px) {
+  .container .cards {
+    width: calc(100% - 700px); } }
+
+@media (min-width: 1600px) {
+  .container .cards {
+    width: calc(100% - 800px); } }
 
 footer {
   width: 100%;
