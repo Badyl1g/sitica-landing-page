@@ -2,13 +2,32 @@
   box-sizing: border-box; }
 
 :root {
-  --gradient: linear-gradient(-125deg, #8468F5 0%, #EC74E7 100%);
-  --gray: #98a2bc;
-  --shadow: 0px 0px 40px -10px rgba(0, 0, 0, 0.2);
-  --background: linear-gradient(35deg, #EEF1F6 0%, #FCFDFD 100%);
-  --atica: linear-gradient(to right, #56CCF2 0%, #2F80ED 100%);
-  --citica: linear-gradient(to right, #F7971E 0%, #FFD200 100%);
-  --columns: minmax(15px, 1fr) minmax(10px, 1660px) minmax(15px, 1fr);
+  --gradient: linear-gradient(
+    -125deg, 
+    #8468F5 0%, 
+    #EC74E7 100%
+  );
+  --gray: rgb(152, 162, 188);
+  --shadow: 0px 0px 40px -10px rgba(0,0,0,0.2);
+  --background: linear-gradient(
+    35deg, 
+    #EEF1F6 0%, 
+    #FCFDFD 100%
+  );
+  --atica: linear-gradient(
+    to right, 
+    #56CCF2 0%, 
+    #2F80ED 100%
+  );
+  --citica: linear-gradient(
+    to right, 
+    #F7971E 0%, 
+    #FFD200 100%
+  );
+  --columns: 
+    minmax(15px, 1fr) 
+    minmax(10px, 1660px) 
+    minmax(15px, 1fr);
   --header-height: calc(35px + 2 * 43px);
   --footer-height: 150px; }
 
@@ -48,7 +67,8 @@ header {
       background: var(--gradient); }
     header .logo-wrapper .name {
       margin-left: 9px;
-      font-size: 23px; }
+      font-size: 23px;
+      font-weight: 500; }
   header .links-list {
     display: none; }
   header .hamburger {
@@ -152,41 +172,51 @@ header {
     text-align: center; }
     .container .headings .sub-heading {
       color: var(--gray);
-      font-weight: 400; }
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 36px; }
     .container .headings .main-heading {
-      font-weight: 500; }
+      max-width: 450px;
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 46px; }
     .container .headings .input-wrapper {
       margin-top: 80px;
+      height: 48px;
       position: relative;
-      border-radius: 100px;
-      box-shadow: var(--shadow); }
+      border-radius: 100px; }
       .container .headings .input-wrapper .input {
         width: 100%;
+        height: 100%;
         padding: 20px 130px 20px 20px;
-        font-size: 18px;
+        font-family: inherit;
+        font-size: 14px;
         background: white;
         border: none;
         border-radius: 100px;
+        box-shadow: 0px 20px 50px -20px rgba(0, 0, 0, 0.2);
         transition: 0.2s ease-in-out; }
         .container .headings .input-wrapper .input:focus {
-          box-shadow: 0px 0px 40px 0px rgba(0, 0, 0, 0.2); }
+          outline: none;
+          box-shadow: 0px 20px 50px -10px rgba(0, 0, 0, 0.2); }
       .container .headings .input-wrapper .send {
         width: 110px;
-        height: 40px;
+        height: 33px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         position: absolute;
-        top: 12px;
-        right: 12px;
+        top: 7px;
+        right: 7px;
         padding: 0 15px;
         color: white;
-        font: inherit;
+        font-family: inherit;
         font-size: 15px;
         border: none;
         border-radius: 100px;
         cursor: pointer;
         background: var(--gradient);
+        box-shadow: 0px 10px 20px 0px rgba(236, 116, 231, 0.3);
         transition: 0.3s ease-in-out; }
         .container .headings .input-wrapper .send.sending {
           width: 100%;
@@ -246,7 +276,7 @@ header {
           justify-self: end;
           align-self: center;
           font-size: 17px;
-          font-weight: 500; }
+          font-weight: 400; }
       .container .cards .card-wrapper .card-pseudo {
         position: absolute;
         top: 30px;
@@ -310,18 +340,21 @@ header {
         max-width: 100%; }
     .container .slider-controls .slick-prev {
       background: white; }
-      .container .slider-controls .slick-prev:hover {
+      .container .slider-controls .slick-prev:active {
         transform: translateX(-10px); }
     .container .slider-controls .slick-next {
       margin-left: 30px;
       color: white;
       background: var(--gradient); }
-      .container .slider-controls .slick-next:hover {
+      .container .slider-controls .slick-next:active {
         transform: translateX(10px); }
 
 @media (min-width: 800px) {
   :root {
-    --columns: minmax(70px, 1fr) minmax(10px, 1660px) minmax(70px, 1fr); }
+    --columns: 
+    minmax(70px, 1fr) 
+    minmax(10px, 1660px) 
+    minmax(70px, 1fr); }
   .container .cards {
     justify-self: center;
     overflow-x: visible; } }
@@ -334,6 +367,8 @@ header {
       justify-self: start;
       align-self: center;
       text-align: left; }
+      .container .headings .input-wrapper {
+        width: 500px; }
     .container .cards {
       width: calc(100% - 600px);
       max-width: unset;
@@ -369,8 +404,11 @@ footer {
   transition: transform 0.3s ease-in-out,  opacity 0.3s ease-in-out; }
   footer .design, footer .code {
     align-self: center;
-    margin: 0; }
+    margin: 0;
+    color: var(--gray);
+    font-weight: 400; }
     footer .design .author, footer .code .author {
+      font-weight: 500;
       background: var(--gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent; }

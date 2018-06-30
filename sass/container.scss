@@ -17,47 +17,60 @@
     .sub-heading {
       color: var(--gray);
       font-weight: 400;
+      font-size: 20px;
+      line-height: 36px;
     }
 
     .main-heading {
+      max-width: 450px;
       font-weight: 500;
+      font-size: 28px;
+      line-height: 46px;
     }
 
     .input-wrapper {
       margin-top: 80px;
+      height: 48px;
       position: relative;
       border-radius: 100px;
-      box-shadow: var(--shadow);
+      // box-shadow: var(--shadow);
+      
       
       .input {
         width: 100%;
+        height: 100%;
+        // padding: 20px 130px 20px 20px;
         padding: 20px 130px 20px 20px;
-        font-size: 18px;
+        font-family: inherit;
+        font-size: 14px;
         background: white;
         border: none;
         border-radius: 100px;
+        box-shadow: 0px 20px 50px -20px rgba(0,0,0,0.2);
         transition: 0.2s ease-in-out;
         &:focus {
-          box-shadow: 0px 0px 40px 0px rgba(0,0,0,0.2);
+          outline: none;
+          box-shadow: 0px 20px 50px -10px rgba(0,0,0,0.2);
         }
       }
       .send {
         width: 110px;
-        height: 40px;
+        height: 33px;
         display: flex;
         justify-content: space-around;
         align-items: center;
         position: absolute;
-        top: 12px;
-        right: 12px;
+        top: 7px;
+        right: 7px;
         padding: 0 15px;
         color: white;
-        font: inherit;
+        font-family: inherit;
         font-size: 15px;
         border: none;
         border-radius: 100px;
         cursor: pointer;
         background: var(--gradient);
+        box-shadow: 0px 10px 20px 0px rgba(236, 116, 231, 0.3);
         transition: 0.3s ease-in-out;
         &.sending {
           width: 100%;
@@ -137,7 +150,7 @@
           justify-self: end;
           align-self: center;
           font-size: 17px;
-          font-weight: 500;
+          font-weight: 400;
         }
       }
       .card-pseudo {
@@ -220,20 +233,22 @@
         transition: transform 0.2s ease-in-out;
         box-shadow: var(--shadow);
 
-        img {max-width: 100%}
+        img {
+          max-width: 100%;
+        }
       }
       &-prev {
         // background: var(--gradient);
         // -webkit-background-clip: text;
         // -webkit-text-fill-color: transparent;
         background: white;
-        &:hover {transform: translateX(-10px)}
+        &:active {transform: translateX(-10px)}
     }
       &-next {
         margin-left: 30px;
         color: white;
         background: var(--gradient);
-        &:hover {transform: translateX(10px)}
+        &:active {transform: translateX(10px)}
     }
     }
   }
@@ -269,6 +284,10 @@
       justify-self: start;
       align-self: center;
       text-align: left;
+
+      .input-wrapper {
+        width: 500px;
+      }
     }
 
     .cards {

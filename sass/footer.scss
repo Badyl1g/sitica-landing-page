@@ -14,8 +14,11 @@ footer {
     // grid-column: 2/3;
     align-self: center;
     margin: 0;
+    color: var(--gray);
+    font-weight: 400;
 
     .author {
+      font-weight: 500;
       background: var(--gradient);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
